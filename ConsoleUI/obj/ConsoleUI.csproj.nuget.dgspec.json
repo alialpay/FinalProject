@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\ConsoleUI\\ConsoleUI.csproj": {}
+    "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\ConsoleUI\\ConsoleUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Business\\Business.csproj": {
+    "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Business\\Business.csproj",
+        "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\alial\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Business\\obj\\",
+        "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alial\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj"
+              "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\ConsoleUI\\ConsoleUI.csproj": {
+    "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\ConsoleUI\\ConsoleUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\ConsoleUI\\ConsoleUI.csproj",
+        "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\ConsoleUI\\ConsoleUI.csproj",
         "projectName": "ConsoleUI",
-        "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\ConsoleUI\\ConsoleUI.csproj",
+        "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\ConsoleUI\\ConsoleUI.csproj",
         "packagesPath": "C:\\Users\\alial\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\ConsoleUI\\obj\\",
+        "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\ConsoleUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alial\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,14 +92,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Business\\Business.csproj"
+              "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Business\\Business.csproj"
               },
-              "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj"
+              "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj"
               }
             }
           }
@@ -132,14 +132,14 @@
         }
       }
     },
-    "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\alial\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alial\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -156,8 +156,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj"
+              "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj"
               }
             }
           }
@@ -172,6 +172,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.11, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -193,14 +197,14 @@
         }
       }
     },
-    "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj": {
+    "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\alial\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alial\\AppData\\Roaming\\NuGet\\NuGet.Config",

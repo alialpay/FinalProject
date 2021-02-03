@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\alial\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\VisualStudioProjects\\FinalProject\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\alial\\OneDrive\\Belgeler\\GitHub\\FinalProject\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alial\\AppData\\Roaming\\NuGet\\NuGet.Config",
