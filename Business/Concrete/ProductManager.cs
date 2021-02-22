@@ -1,15 +1,27 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcers.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Business.Concrete
 {
+   /*
+    * Cross Cutting Concerns
+        Log
+        Cache
+        Transaction
+        Authorization
+        ...
+   */
     public class ProductManager : IProductService
     {
         IProductDal _productDal;
@@ -19,15 +31,15 @@ namespace Business.Concrete
         }
 
         //[LogAspect] --> AOP
+        
+        [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
-            if (product.ProductName.Length < 2)
-            {
-                //magic strings
-                return new ErrorResult(Messages.ProductAdded);
-            }
+            //business codes
+
             _productDal.Add(product);
-            return new Result(true,"Ürün eklendi...");
+
+            return new SuccessResult(Messages.ProductAdded);
         }
         
         public IDataResult<List<Product>> GetAll()

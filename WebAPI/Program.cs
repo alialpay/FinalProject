@@ -25,7 +25,7 @@ namespace WebAPI
             .ConfigureContainer<ContainerBuilder>(builder => 
             {
                 builder.RegisterModule(new AutofacBusinessModule());
-            })
+            })                                                                      // buraya kadar yeni konfigurasyon iþlemi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
