@@ -4,6 +4,7 @@ using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcers.Validation;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -11,6 +12,7 @@ using Entities.DTOs;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Business.Concrete
@@ -18,10 +20,13 @@ namespace Business.Concrete
 
     public class ProductManager : IProductService
     {
-        IProductDal _productDal;
-        public ProductManager(IProductDal productDal)
+        IProductDal _productDal;        // bir entitymanager yani buradaki ProductManager kendisi haricindeki başka bir Dal'ı enjekte edemez. ICategoryDal _categoryDal şeklinde kodlama yapılamaz
+        ICategoryService _categoryService;      // bir managerin içerisinde kendi dalı hariç başka bir dal enjeksiyonu yapamayız. Onun yerine servisi enjekte edebiliriz
+        public ProductManager(IProductDal productDal, ICategoryService categoryService)
         {
             _productDal = productDal;
+            _categoryService = categoryService;
+            
         }
 
         //[LogAspect] --> AOP
@@ -29,22 +34,19 @@ namespace Business.Concrete
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
-
-            var result = _productDal.GetAll(p => p.CategoryId == product.CategoryId).Count;
-            if (result>=10)
-            {
-                return new ErrorResult(Messages.ProductCountOfCategoryError);
-            }
-
-
             //business codes
 
+            IResult result = BusinessRules.Run(CheckIfProductNameExists(product.ProductName), // isterse bin tane böyle iş kuralı olsun. Bu şekilde gönderebiliriz
+                CheckIfProductCountOfCategoryCorrect(product.CategoryId),
+                CheckIfCategoryLimitExceded());                    // burada polymorphizm var
 
-
+            if (result != null)
+            {
+                return result;
+            }
             _productDal.Add(product);
 
             return new SuccessResult(Messages.ProductAdded);
-
 
         }
 
@@ -76,6 +78,43 @@ namespace Business.Concrete
         public IDataResult<List<ProductDetailDto>> GetProductDetails()
         {
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
+        }
+
+        public IResult Update(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        private IResult CheckIfProductCountOfCategoryCorrect(int categoryId) // aynı kategori içinde en fazla 15 ürün olsun kuralı
+        {
+            // Select count(*) from products where categoryId=1
+            var result = _productDal.GetAll(p => p.CategoryId == categoryId).Count;
+            if (result >= 15)
+            {
+                return new ErrorResult(Messages.ProductCountOfCategoryError);
+            }
+            return new SuccessResult();
+        }
+
+        private IResult CheckIfProductNameExists(string productName) // aynı isimde ürün eklenemez kuralı
+        {
+            // Select count(*) from products where categoryId=1
+            var result = _productDal.GetAll(p => p.ProductName == productName).Any();
+            if (result)
+            {
+                return new ErrorResult(Messages.ProductNameAlreadyExists);
+            }
+            return new SuccessResult();
+        }
+        private IResult CheckIfCategoryLimitExceded() 
+        {
+
+            var result = _categoryService.GetAll();
+            if (result.Data.Count > 15)
+            {
+                return new ErrorResult(Messages.CategoryLimitExceded);
+            }
+            return new SuccessResult();
         }
     }
 }
