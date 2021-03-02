@@ -20,15 +20,16 @@ namespace WebAPI
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)                                            
-            .UseServiceProviderFactory(new AutofacServiceProviderFactory())         //  bu kýsým ben baþka bir conrainer kullanmak istiyorumu ifade eder
-            .ConfigureContainer<ContainerBuilder>(builder => 
-            {
-                builder.RegisterModule(new AutofacBusinessModule());
-            })                                                                      // buraya kadar yeni konfigurasyon iþlemi
+            Host.CreateDefaultBuilder(args)
+                .UseServiceProviderFactory(new AutofacServiceProviderFactory())     // burasý "ben baþka bir container kullanmak istiyorum"u ifade eder
+                .ConfigureContainer<ContainerBuilder>(builder =>
+                {
+                    builder.RegisterModule(new AutofacBusinessModule());
+                })                                                                  // buraya kadar yeni konfigürasyon iþlemi yaptýk
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 });
     }
 }
+
