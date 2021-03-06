@@ -1,5 +1,7 @@
 using Business.Abstract;
 using Business.Concrete;
+using Core.DependencyResolvers;
+using Core.Extensions;
 using Core.Utilities.IoC;
 using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
@@ -43,7 +45,6 @@ namespace WebAPI
             //services.AddSingleton<IProductDal, EfProductDal>();
             //Sinleton tüm bellekte sadece bir tana productmanager oluþturuyor, isterse 1 milyon client gelsin, hepsine ayný instance'ý veriyor. Ýçinde data tutmayan yapýlarda kullanýlýr, performans iiçin faydalýdýr.
 
-            services.AddSingleton<HttpContextAccessor, HttpContextAccessor>();
 
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
@@ -61,7 +62,10 @@ namespace WebAPI
                         IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
                     };
                 });
-            ServiceTool.Create(services);
+
+            services.AddDependencyResolvers(new ICoreModule[] { 
+                new CoreModule()
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
