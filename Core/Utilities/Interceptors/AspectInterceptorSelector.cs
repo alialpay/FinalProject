@@ -16,6 +16,8 @@ namespace Core.Utilities.Interceptors
             var methodAttributes = type.GetMethod(method.Name)
                 .GetCustomAttributes<MethodInterceptionBaseAttribute>(true);
             classAttributes.AddRange(methodAttributes);
+            //classAttributes.Add(new ExceptionLogAspect(typeof(FileLogger)));      //engin hocanın projede bu satırda log işlemi var. daha sonra uygulanabilir
+            //classAttributes.Add(new ExceptionPerformanceAspect?(typeof(?)));      //[PerformanceAspect(5)] performansı tüm metotlarda kontrol etmek istersek ekleyebiliriz. 
 
             return classAttributes.OrderBy(x => x.Priority).ToArray();
         }

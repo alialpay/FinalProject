@@ -16,6 +16,8 @@ namespace Business.Abstract
         IDataResult<Product> GetById(int productId);
         IResult Add(Product product);
         IResult Update(Product product);
+        IResult AddTransactionalTest(Product product);      // Transaction : Uygulamalarda tutarlılığı korumak için yapılan bir yöntem. örneğin enginin hesabından
+                                                            // 10 lira kereme yollandığında enginden 10 düşülür, kereme 10 eklenmesi gerekir. enginden 10 gidip kereme 10 gelmezse işlemin geri alınması gerekir
 
 
         // RESTFUL --> HTTP --> (TCP)
