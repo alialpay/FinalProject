@@ -45,6 +45,7 @@ namespace WebAPI
             //services.AddSingleton<IProductDal, EfProductDal>();
             //Sinleton tüm bellekte sadece bir tana productmanager oluþturuyor, isterse 1 milyon client gelsin, hepsine ayný instance'ý veriyor. Ýçinde data tutmayan yapýlarda kullanýlýr, performans iiçin faydalýdýr.
 
+            services.AddCors();
 
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
@@ -75,6 +76,8 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
 
             app.UseHttpsRedirection();
 
