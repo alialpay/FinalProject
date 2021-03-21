@@ -57,7 +57,7 @@ namespace Core.DataAccess.EntityFramework
             {
                 var updatedEntity = context.Entry(entity);    // referansı yakalamak için
                 updatedEntity.State = EntityState.Modified;
-                context.SaveChanges();
+                context.SaveChanges(); 
             }
         }
     }
